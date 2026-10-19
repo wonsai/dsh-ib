@@ -1656,9 +1656,9 @@ em { font-style: italic; }
 .school-badge { margin-bottom: 12px; }
 .hero-subtitle { margin-bottom: 20px; }
 .hero-recommend { text-align: left; color: #fff; margin: 0 auto 22px; padding: 20px 22px; background: rgba(255,255,255,.09); border: 1px solid rgba(255,255,255,.25); border-radius: 16px; }
-.hero-recommend h2 { font-size: 19px; line-height: 1.6; margin-bottom: 12px; word-break: keep-all; }
+.hero-recommend h2 { font-size: 16px; line-height: 1.6; margin-bottom: 12px; word-break: keep-all; }
 .hero-recommend ul { list-style: none; }
-.hero-recommend li { position: relative; padding-left: 20px; font-size: 16px; line-height: 1.75; word-break: keep-all; }
+.hero-recommend li { position: relative; padding-left: 20px; font-size: 14px; line-height: 1.75; word-break: keep-all; }
 .hero-recommend li + li { margin-top: 9px; }
 .hero-recommend li::before { content: '○'; position: absolute; left: 0; color: #a8ddff; font-weight: 700; }
 .hero-scroll-cue { position: relative; z-index: 2; display: flex; flex-direction: column; align-items: center; color: #fff; text-decoration: none; padding: 8px 12px 0; }
@@ -1683,5 +1683,5 @@ em { font-style: italic; }
 .video-caption a { font-size: 14px; color: var(--blue-main); text-underline-offset: 4px; }
 .hero-scroll-cue:focus-visible, .video-launch:focus-visible { outline: 3px solid var(--accent); outline-offset: 5px; }
 @media (min-width: 768px) { .video-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-@media (max-width: 400px) { .hero { padding-left: 16px; padding-right: 16px; } .hero-recommend { padding: 15px 16px; } .hero-recommend h2 { font-size: 18px; } .hero-recommend li { font-size: 15px; } .hero-title { font-size: 31px; } .hero-scroll-cue strong { font-size: 16px; } }
+@media (max-width: 400px) { .hero { padding-left: 16px; padding-right: 16px; } .hero-recommend { padding: 15px 16px; } .hero-recommend h2 { font-size: 15px; } .hero-recommend li { font-size: 13px; } .hero-title { font-size: 31px; } .hero-scroll-cue strong { font-size: 16px; } }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .scroll-cue-arrows { animation: none; } }
