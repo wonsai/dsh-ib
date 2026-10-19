@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" />
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/style.css?v=20261019-video" />
 </head>
 <body>
 
@@ -24,17 +24,28 @@
       <div class="school-badge">IB WORLD SCHOOL</div>
       <h1 class="hero-title">대구서부고등학교</h1>
       <p class="hero-subtitle">IB DIPLOMA PROGRAMME</p>
-      <p class="hero-desc">학생들이 창의와 배려를 바탕으로 미래를 열 수 있는<br/>품격·실력·국제적 소양을 갖춘 인재로 거듭날 수 있도록<br/>적극 지원합니다.</p>
+      <div class="hero-recommend">
+        <h2>IB 프로그램은 이런 학생들에게 추천합니다.</h2>
+        <ul>
+          <li>스스로 생각하고 답을 찾아가는 과정에 흥미를 가진 학생</li>
+          <li>자신의 진로와 공부를 스스로 계획하고 실천하며 자기관리를 잘 하고 싶은 학생</li>
+          <li>글로벌시대에 영어로 말하고, 쓰고, 소통하고 싶은 학생</li>
+          <li>글쓰고 토론하고 협업하며 자신을 성장시키고 싶은 학생</li>
+        </ul>
+      </div>
       <a href="https://open.kakao.com/o/sjc0vl4e" target="_blank" rel="noopener noreferrer" class="hero-btn">카카오톡 상담 신청하기 <i class="fas fa-comment"></i></a>
     </div>
-    <div class="hero-scroll-indicator">
-      <span></span><span></span><span></span>
-    </div>
+    <a class="hero-scroll-cue" href="#videos">
+      <strong>아래로 내려 홍보영상을 확인하세요</strong>
+      <span class="scroll-cue-detail">화면을 위로 밀거나 여기를 눌러주세요</span>
+      <span class="scroll-cue-arrows" aria-hidden="true">⌄<br/>⌄</span>
+    </a>
   </header>
 
   <!-- 네비게이션 바 (스크롤 시 고정) -->
   <nav class="sticky-nav" id="stickyNav">
     <ul>
+      <li><a href="#videos">홍보영상</a></li>
       <li><a href="#about">IB란?</a></li>
       <li><a href="#dp-overview">DP 개요</a></li>
       <li><a href="#curriculum">교육과정</a></li>
@@ -45,6 +56,36 @@
   </nav>
 
   <main>
+
+    <section id="videos" class="section video-section">
+      <div class="section-header blue">
+        <div class="section-tag">영상으로 만나는 IB</div>
+        <h2>대구서부고 IB, 영상으로 먼저 만나보세요</h2>
+        <p class="video-intro">보고 싶은 영상의 재생 버튼을 눌러주세요.</p>
+      </div>
+      <div class="section-body video-grid">
+        <article class="video-card">
+          <div class="video-player">
+            <button type="button" class="video-launch" data-video-id="enKcIbfMSEk" aria-label="스터디 윗 조나단 영상 재생">
+              <img src="https://i.ytimg.com/vi/enKcIbfMSEk/hqdefault.jpg" alt="스터디 윗 조나단 영상 썸네일" />
+              <span class="video-play-icon" aria-hidden="true">▶</span>
+              <span class="video-play-label">눌러서 영상 보기</span>
+            </button>
+          </div>
+          <div class="video-caption"><h3>스터디 윗 조나단</h3><a href="https://www.youtube.com/watch?v=enKcIbfMSEk" target="_blank" rel="noopener noreferrer">유튜브에서 보기 ↗</a></div>
+        </article>
+        <article class="video-card">
+          <div class="video-player">
+            <button type="button" class="video-launch" data-video-id="u8y_YfM_84Q" aria-label="대구서부고 IB 홍보영상 재생">
+              <img src="https://i.ytimg.com/vi/u8y_YfM_84Q/hqdefault.jpg" alt="대구서부고 IB 홍보영상 썸네일" />
+              <span class="video-play-icon" aria-hidden="true">▶</span>
+              <span class="video-play-label">눌러서 영상 보기</span>
+            </button>
+          </div>
+          <div class="video-caption"><h3>대구서부고 IB 홍보영상</h3><a href="https://www.youtube.com/watch?v=u8y_YfM_84Q" target="_blank" rel="noopener noreferrer">유튜브에서 보기 ↗</a></div>
+        </article>
+      </div>
+    </section>
 
     <!-- IB란? -->
     <section id="about" class="section">
@@ -860,6 +901,6 @@
     <i class="fas fa-chevron-up"></i>
   </button>
 
-  <script src="js/main.js"></script>
+  <script src="js/main.js?v=20261019-video"></script>
 </body>
 </html>

@@ -4,6 +4,19 @@
 
 document.addEventListener('DOMContentLoaded', function () {
 
+  // 썸네일을 누른 영상만 로드합니다. 상담 링크의 기본 동작은 유지합니다.
+  document.querySelectorAll('.video-launch').forEach(function (button) {
+    button.addEventListener('click', function () {
+      const frame = document.createElement('iframe');
+      frame.src = 'https://www.youtube-nocookie.com/embed/' + button.dataset.videoId + '?autoplay=1&playsinline=1&rel=0';
+      frame.title = button.getAttribute('aria-label');
+      frame.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
+      frame.allowFullscreen = true;
+      button.replaceWith(frame);
+      frame.focus();
+    });
+  });
+
   // === 1. 아코디언 토글 ===
   window.toggleAcc = function (btn) {
     const item = btn.closest('.acc-item');
@@ -119,7 +132,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   // === 7. 섹션 페이드인 애니메이션 ===
-  const sectionBodies = document.querySelectorAll('.section-body, .section-header');
+  const sectionBodies = document.querySelectorAll('section:not(.video-section) > .section-body, section:not(.video-section) > .section-header');
 
   const fadeObserver = new IntersectionObserver(function (entries) {
     entries.forEach(function (entry) {
