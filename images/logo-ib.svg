@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="500" height="500">
+  <defs>
+    <!-- 구체 메인 그라디언트: 좌상단 밝은 하늘색 → 우하단 진한 네이비 -->
+    <radialGradient id="sphereGrad" cx="38%" cy="35%" r="65%" fx="30%" fy="28%">
+      <stop offset="0%" stop-color="#C8D9EE"/>
+      <stop offset="30%" stop-color="#8AADD4"/>
+      <stop offset="60%" stop-color="#4A7AB8"/>
+      <stop offset="85%" stop-color="#1D4B8F"/>
+      <stop offset="100%" stop-color="#0E2F6A"/>
+    </radialGradient>
+    <!-- ib 글자 흰색 마스크용 -->
+    <clipPath id="sphereClip">
+      <circle cx="250" cy="250" r="178"/>
+    </clipPath>
+    <!-- 외곽 링 텍스트용 그라디언트 -->
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Myriad+Pro:wght@400&amp;display=swap');
+    </style>
+  </defs>
+
+  <!-- 배경 흰색 -->
+  <rect width="500" height="500" fill="white"/>
+
+  <!-- 외곽 이중 원형 라인 (청색, 부분 끊김 없이 완전 원) -->
+  <circle cx="250" cy="250" r="238" fill="none" stroke="#1D4B8F" stroke-width="2.2"/>
+  <circle cx="250" cy="250" r="228" fill="none" stroke="#1D4B8F" stroke-width="1.2"/>
+
+  <!-- 상단 원호 텍스트: "COLEGIO DEL MUNDO • WORLD SCHOOL •" -->
+  <path id="topArc" d="M 60,250 A 190,190 0 0,1 440,250" fill="none"/>
+  <text font-family="Arial, Helvetica, sans-serif" font-size="17.5" font-weight="600" fill="#1D4B8F" letter-spacing="2.5">
+    <textPath href="#topArc" startOffset="3%">COLEGIO DEL MUNDO  •  WORLD SCHOOL  •</textPath>
+  </text>
+
+  <!-- 하단 원호 텍스트: "ÉCOLE DU MONDE" (뒤집힌 아치 = 정방향으로 읽힘) -->
+  <path id="bottomArc" d="M 75,270 A 185,185 0 0,0 425,270" fill="none"/>
+  <text font-family="Arial, Helvetica, sans-serif" font-size="17.5" font-weight="600" fill="#1D4B8F" letter-spacing="2.5">
+    <textPath href="#bottomArc" startOffset="18%">ÉCOLE DU MONDE</textPath>
+  </text>
+
+  <!-- 메인 구체 원 -->
+  <circle cx="250" cy="250" r="178" fill="url(#sphereGrad)"/>
+
+  <!-- ib 글자 (흰색, 세리프 스타일) -->
+  <!-- "i" 글자 본체 -->
+  <text x="108" y="308"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-size="195"
+        font-weight="400"
+        fill="white"
+        opacity="0.92"
+        clip-path="url(#sphereClip)">ib</text>
+
+  <!-- ® 등록상표 기호: 우상단 외부 -->
+  <text x="425" y="112"
+        font-family="Arial, Helvetica, sans-serif"
+        font-size="22"
+        font-weight="400"
+        fill="#1D4B8F">®</text>
+
+</svg>

@@ -1,0 +1,164 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="500" height="500">
+  <defs>
+    <!-- 연두색 리본 그라디언트 (밝은 황록색 → 진한 초록) -->
+    <linearGradient id="ribbonGreenMain" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#c8d820"/>
+      <stop offset="40%" stop-color="#9dc018"/>
+      <stop offset="100%" stop-color="#5a9010"/>
+    </linearGradient>
+    <!-- 연두색 리본 안쪽 말림 (어두운 면) -->
+    <linearGradient id="ribbonGreenDark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4d8012"/>
+      <stop offset="100%" stop-color="#3a6010"/>
+    </linearGradient>
+    <!-- 하늘색 리본 그라디언트 (밝은 하늘 → 진한 파랑) -->
+    <linearGradient id="ribbonBlueMain" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1a82b5"/>
+      <stop offset="40%" stop-color="#4ab0d8"/>
+      <stop offset="100%" stop-color="#a8daf0"/>
+    </linearGradient>
+    <!-- 하늘색 리본 안쪽 말림 (어두운 면) -->
+    <linearGradient id="ribbonBlueDark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a5a8e"/>
+      <stop offset="100%" stop-color="#0e3d6b"/>
+    </linearGradient>
+    <!-- 연두+하늘 혼합 (교차 부분) -->
+    <linearGradient id="ribbonGreenBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7ec8e0"/>
+      <stop offset="50%" stop-color="#5aaf70"/>
+      <stop offset="100%" stop-color="#6dc830"/>
+    </linearGradient>
+    <!-- 클립 - 내부 원 -->
+    <clipPath id="innerCircle">
+      <circle cx="250" cy="250" r="195"/>
+    </clipPath>
+  </defs>
+
+  <!-- 배경 흰색 -->
+  <rect width="500" height="500" fill="white"/>
+
+  <!-- 외곽 네이비 원 -->
+  <circle cx="250" cy="250" r="245" fill="#0a3d73"/>
+
+  <!-- 내부 흰색 원 -->
+  <circle cx="250" cy="250" r="196" fill="white"/>
+
+  <!-- ===== 리본 심볼 (4개 리본, 중앙 교차) ===== -->
+  <!-- 
+    실제 로고: 좌우 연두색 리본 + 상하 하늘색 리본
+    각 리본 끝단이 안쪽으로 말려드는 형태
+    중앙에 다이아몬드형 흰 공백 생성
+  -->
+
+  <!-- 하늘색 리본 (상단 → 하단, 세로 방향) - 뒤에 그려짐 -->
+  <!-- 상단 리본 몸체 -->
+  <path d="M 215,58
+           C 200,75 188,100 192,130
+           C 195,155 210,168 228,172
+           C 240,175 252,174 262,170
+           C 278,164 288,150 285,130
+           C 282,105 270,80 258,60
+           C 252,52 240,48 228,50
+           C 222,51 218,54 215,58 Z"
+        fill="url(#ribbonBlueMain)"/>
+  <!-- 상단 리본 안쪽 말림 -->
+  <path d="M 228,172
+           C 238,178 250,180 260,176
+           C 272,170 280,158 278,144
+           C 275,155 268,163 258,168
+           C 250,172 240,174 228,172 Z"
+        fill="url(#ribbonBlueDark)" opacity="0.85"/>
+
+  <!-- 하단 리본 몸체 -->
+  <path d="M 285,370
+           C 300,353 312,328 308,298
+           C 305,273 290,260 272,256
+           C 260,253 248,254 238,258
+           C 222,264 212,278 215,298
+           C 218,323 230,348 242,368
+           C 248,377 260,381 272,379
+           C 278,378 282,374 285,370 Z"
+        fill="url(#ribbonBlueMain)"/>
+  <!-- 하단 리본 안쪽 말림 -->
+  <path d="M 272,256
+           C 262,250 250,248 240,252
+           C 228,258 220,270 222,284
+           C 225,273 232,265 242,260
+           C 250,256 260,254 272,256 Z"
+        fill="url(#ribbonBlueDark)" opacity="0.85"/>
+
+  <!-- 연두색 리본 (좌→우, 가로 방향) - 앞에 그려짐 -->
+  <!-- 좌측 리본 몸체 -->
+  <path d="M 58,215
+           C 75,200 100,188 130,192
+           C 155,195 168,210 172,228
+           C 175,240 174,252 170,262
+           C 164,278 150,288 130,285
+           C 105,282 80,270 60,258
+           C 52,252 48,240 50,228
+           C 51,222 54,218 58,215 Z"
+        fill="url(#ribbonGreenMain)"/>
+  <!-- 좌측 리본 안쪽 말림 -->
+  <path d="M 172,228
+           C 178,238 180,250 176,260
+           C 170,272 158,280 144,278
+           C 155,275 163,268 168,258
+           C 172,250 174,240 172,228 Z"
+        fill="url(#ribbonGreenDark)" opacity="0.85"/>
+
+  <!-- 우측 리본 몸체 -->
+  <path d="M 442,285
+           C 425,300 400,312 370,308
+           C 345,305 332,290 328,272
+           C 325,260 326,248 330,238
+           C 336,222 350,212 370,215
+           C 395,218 420,230 440,242
+           C 448,248 452,260 450,272
+           C 449,278 446,282 442,285 Z"
+        fill="url(#ribbonGreenMain)"/>
+  <!-- 우측 리본 안쪽 말림 -->
+  <path d="M 328,272
+           C 322,262 320,250 324,240
+           C 330,228 342,220 356,222
+           C 345,225 337,232 332,242
+           C 328,250 326,260 328,272 Z"
+        fill="url(#ribbonGreenDark)" opacity="0.85"/>
+
+  <!-- 중앙 교차부: 하늘색이 연두색 위로 겹치는 부분 재현 -->
+  <!-- 상단-좌측 교차 -->
+  <path d="M 192,192
+           C 200,185 210,180 220,180
+           C 215,190 212,202 215,215
+           C 205,210 196,202 192,192 Z"
+        fill="url(#ribbonBlueMain)" opacity="0.75"/>
+  <!-- 하단-우측 교차 -->
+  <path d="M 308,308
+           C 300,315 290,320 280,320
+           C 285,310 288,298 285,285
+           C 295,290 304,298 308,308 Z"
+        fill="url(#ribbonBlueMain)" opacity="0.75"/>
+
+  <!-- 중앙 흰색 다이아몬드 공백 -->
+  <path d="M 250,215 L 285,250 L 250,285 L 215,250 Z" fill="white"/>
+
+  <!-- ===== 텍스트 링 ===== -->
+  <!-- 상단 한국어 텍스트: 대구서부고등학교 -->
+  <path id="topKorean" d="M 55,250 A 195,195 0 0,1 445,250" fill="none"/>
+  <text font-family="'Noto Sans KR', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif"
+        font-size="26" font-weight="700" fill="white" letter-spacing="3">
+    <textPath href="#topKorean" startOffset="7%">대구서부고등학교</textPath>
+  </text>
+
+  <!-- 하단 영어 텍스트: DAEGU SEOBU HIGH SCHOOL -->
+  <path id="bottomEnglish" d="M 72,270 A 188,188 0 0,0 428,270" fill="none"/>
+  <text font-family="Arial, Helvetica, sans-serif"
+        font-size="17" font-weight="700" fill="white" letter-spacing="2.8">
+    <textPath href="#bottomEnglish" startOffset="5%">DAEGU SEOBU HIGH SCHOOL</textPath>
+  </text>
+
+  <!-- 좌측 점 구분자 -->
+  <circle cx="57" cy="252" r="5" fill="white"/>
+  <!-- 우측 점 구분자 -->
+  <circle cx="443" cy="252" r="5" fill="white"/>
+
+</svg>
